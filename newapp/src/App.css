@@ -1,0 +1,100 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+code,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+fieldset,
+legend,
+button,
+input,
+textarea,
+figure,
+figcaption,
+hr {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  margin-top: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+
+.btnsMainDiv {
+  display: flex;
+  flex-direction: column;
+}
+
+.routes {
+  border: solid 1px;
+  display: flex;
+  justify-content: center;
+}
+
+.brnMenu {
+  margin-bottom: 5px;
+  margin-right: 20px;
+  width: 100px;
+  height: 50px;
+}
+
+.allTaskDiv {
+  width: 247px;
+  border: solid black 1px;
+  margin-top: 5px;
+}
+
+.createNewTaskDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inputCreateDesc {
+  margin-top: 10px;
+  width: 300px;
+  height: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 8px;
+}
+
+.nameAndUrgentDiv {
+  display: flex;
+  justify-content: space-between;
+}
+
+.taskDiv {
+  border: 1px solid black;
+
+}
+
+.taskDiv:hover {
+  background-color: aqua !important;
+}
+
+.myTasksMainDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inputMyTasks {
+  margin-top: 10px;
+  height: 20px;
+
+}
