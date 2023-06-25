@@ -1,21 +1,25 @@
 import React, { useEffect, useState } from 'react'
+import Validation from './Validation'
+import Tasks from './Tasks'
 
 export default function MyTasks({ allData }) {
 
-    useEffect(() => {
-
-    }, [])
 
 
-    const [username, setUsername] = useState('')
-    const [password, setPassword] = useState('')
+
+    const viewUserTasks = () => {
+        if (allData.flag == true) {
+            return <Validation allData={allData} />
+        }
+        else return allData.currentUserTasks.map((val, i) => {
+            return <Tasks key={i} data={val} index={i} />
+        })
+    }
+
 
     return (
-        <div className='myTasksMainDiv'>
-            <h1>Enter Username and Password</h1>
-            <input onChange={(e) => { setUsername(e.target.value) }} className='inputMyTasks' type='text' placeholder='username' />
-            <input onChange={(e) => { setPassword(e.target.value) }} className='inputMyTasks' type='text' placeholder='password' />
-            <button onClick={() => { allData.checkUser(username, password) }}>enter</button>
+        <div >
+            {viewUserTasks()}
         </div>
     )
 }

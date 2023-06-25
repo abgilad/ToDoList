@@ -1,5 +1,6 @@
 import React from 'react'
 import Tasks from './Tasks'
+import Sorts from './Sorts'
 
 export default function AllTask({ allData }) {
 
@@ -13,6 +14,9 @@ export default function AllTask({ allData }) {
 
     return (
         <div className='allTaskDiv'>
+            <div className='sortDiv'>
+                <Sorts />
+            </div>
             {viewTasks()}
         </div>
     )

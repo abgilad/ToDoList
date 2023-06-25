@@ -40,7 +40,6 @@ hr {
 }
 
 .routes {
-  border: solid 1px;
   display: flex;
   justify-content: center;
 }
@@ -53,8 +52,7 @@ hr {
 }
 
 .allTaskDiv {
-  width: 247px;
-  border: solid black 1px;
+
   margin-top: 5px;
 }
 
@@ -80,7 +78,9 @@ hr {
 
 .taskDiv {
   border: 1px solid black;
-
+  border-radius: 20px;
+  width: 300px;
+  height: 60px;
 }
 
 .taskDiv:hover {
@@ -97,4 +97,13 @@ hr {
   margin-top: 10px;
   height: 20px;
 
+}
+
+.sortDiv {
+  display: flex;
+  justify-content: end;
+}
+
+.isUrgentDiv {
+  border-radius: 10px;
 }

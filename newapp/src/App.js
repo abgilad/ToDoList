@@ -10,6 +10,9 @@ function App() {
 
   const nav = useNavigate()
 
+  const [flag, setFlag] = useState(true)
+
+
   const [data, setData] = useState([
     { taskCompliteName: 'Gilad', desc: 'lasfl lkajsdla', isComplited: false, isUrgentTask: 'yes' }
   ])
@@ -44,7 +47,8 @@ function App() {
       });
 
       setCurrentUserTasks(currentUserData);
-      nav('/');
+      setFlag(false)
+
     }
     else {
       alert('wrong username');
@@ -63,13 +67,15 @@ function App() {
     setData: setData,
     currentUserTasks: currentUserTasks,
     setCurrentUserTasks: setCurrentUserTasks,
-    checkUser: checkUser
+    checkUser: checkUser,
+    flag: flag,
+    setFlag: setFlag
   }
 
   return (
     <div className="App">
       <div className='menuComponent'>
-        <Menu />
+        <Menu allData={allData} />
       </div>
       <div className='routes'>
         <Routes>
