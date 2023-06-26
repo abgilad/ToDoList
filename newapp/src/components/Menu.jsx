@@ -1,13 +1,19 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { Button } from '@mui/material'
 
 export default function Menu({ allData }) {
+
+
+
+
+
     return (
         <div className='btnsMainDiv'>
-            <Link to='/'><button onClick={() => { allData.setFlag(true) }} className='brnMenu'>all task</button></Link>
-            <Link to='/MyTask' ><button className='brnMenu'>my task</button></Link>
-            <Link to='/CreateNewTask'><button onClick={() => { allData.setFlag(true) }} className='brnMenu'>create new task</button></Link>
-            <Link><button onClick={() => { allData.setFlag(true) }} className='brnMenu'>delete task</button></Link>
+            <Link to='/'><Button variant="outlined" onClick={() => { allData.setFlag(true) }} >all task</Button></Link>
+            <Link to='/MyTask' ><Button variant="outlined">my task</Button></Link>
+            <Link to='/CreateNewTask'><Button onClick={() => { allData.setFlag(true) }} variant="outlined">create new task</Button></Link>
+            <Link><Button onClick={() => { allData.setFlag(true) }} variant="outlined">delete task</Button></Link>
         </div>
     )
 }
